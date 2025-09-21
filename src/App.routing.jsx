@@ -1,5 +1,5 @@
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
-import LayoutPage from "./components/Layout";
+import LayoutPage from "./components/layout.jsx";
 import Home from "./Home/home";
 import OrderList from "./Order-List/order_list.jsx";
 
