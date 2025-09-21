@@ -5,7 +5,7 @@ export default function Contacts() {
     const [contacts, setContacts] = useState([]);
 
     useEffect(() => {
-        fetch('/contactsData.json')
+        fetch('/contacts_data.json')
             .then(response => response.json())
             .then(data => setContacts(data))
             .catch(error => console.error('Error fetching contact data:', error));

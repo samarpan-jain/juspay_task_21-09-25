@@ -11,7 +11,7 @@ export default function OrderList() {
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
-    fetch("/orderList.json")
+    fetch("/order_list.json")
       .then((response) => response.json())
       .then((data) => {
         setOrderListData(data)
