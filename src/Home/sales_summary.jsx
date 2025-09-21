@@ -14,12 +14,12 @@ export default function SalesSummary() {
     const [totalSalesData, setTotalSalesData] = useState([]);
 
     useEffect(() => {
-        fetch("/src/assets/sellingProductTableData.json")
+        fetch("/sellingProductTableData.json")
             .then((response) => response.json())
             .then((data) => setSellingProductsData(data))
             .catch((error) => console.error("Error fetching data:", error));
 
-        fetch("/src/assets/totalSalesChartData.json")
+        fetch("/totalSalesChartData.json")
             .then((response) => response.json())
             .then((data) => setTotalSalesData(data))
             .catch((error) => console.error("Error fetching data:", error));

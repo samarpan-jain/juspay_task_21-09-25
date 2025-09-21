@@ -5,7 +5,7 @@ export default function Activities() {
     const [activities, setActivities] = useState([]);
 
     useEffect(() => {
-        fetch('/src/assets/activityData.json')
+        fetch('/activityData.json')
             .then(response => response.json())
             .then(data => setActivities(data))
             .catch(error => console.error('Error fetching activity data:', error));
