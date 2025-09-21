@@ -1,4 +1,4 @@
-export const lineChartData = {
+export const revenueLineChartData = {
   labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
   datasets: [
     {

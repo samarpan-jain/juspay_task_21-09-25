@@ -9,9 +9,16 @@ import {
     Legend
 } from "chart.js";
 
+import { useTheme } from "../../contexts/theme";
+
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend);
 
 export default function LineChart({ chartData, stepSizeY, maxValY, isResponsive = true, isLegend = false, shouldDisplayXGrid = false, fontSizeX = 16, fontSizeY = 14, shouldYBeginAtZero = true }) {
+    const { theme } = useTheme()
+    const isDarkMode = theme === 'dark';
+    const axisColor = isDarkMode ? "#9ca3af" : "#6b7280"; // gray-400
+    const gridColor = isDarkMode ? "#4b5563" : "#e5e7eb"; // gray-600 vs gray-200
+
     const options = {
         responsive: isResponsive,
         plugins: {
@@ -24,9 +31,12 @@ export default function LineChart({ chartData, stepSizeY, maxValY, isResponsive 
         },
         scales: {
             x: {
-                grid: { display: shouldDisplayXGrid },
+                grid: {
+                    display: shouldDisplayXGrid,
+                    color: gridColor
+                },
                 ticks: {
-                    color: "#6b7280", // Tailwind gray-400
+                    color: axisColor,
                     font: { size: fontSizeX }
                 }
             },
@@ -36,11 +46,11 @@ export default function LineChart({ chartData, stepSizeY, maxValY, isResponsive 
                 ticks: {
                     stepSize: stepSizeY,
                     callback: value => `${value}M`,
-                    color: "#9ca3af", // Tailwind gray-400
+                    color: axisColor,
                     font: { size: fontSizeY }
                 },
                 grid: {
-                    color: "#e5e7eb" // Tailwind gray-200
+                    color: gridColor
                 }
             }
         }

@@ -1,4 +1,4 @@
-export const defaultData = {
+export const projectionChartData = {
   labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
   datasets: [
 {

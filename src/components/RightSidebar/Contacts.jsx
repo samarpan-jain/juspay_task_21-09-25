@@ -12,12 +12,14 @@ export default function Contacts() {
     }, []);
 
     return <>
-        <h3 className="text-sm font-semibold mb-2">Contacts</h3>
+        <h3 className="text-sm font-semibold mb-2 text-gray-700 dark:text-gray-200">Contacts</h3>
         <ul>
             {contacts.map((c, i) => (
                 <li key={i} className="flex items-center mb-2 py-1">
-                    {c.imgPath ? <img className="w-8 h-8 rounded-full object-cover" src={c.imgPath} alt="Contact Image" /> : <FaUserCircle className="text-xl text-gray-400" />}
-                    <span className="ml-2 text-sm" title={c.name}>{c.name}</span>
+                    {c.imgPath ? 
+                      <img className="w-8 h-8 rounded-full object-cover" src={c.imgPath} alt="Contact Image" /> : 
+                      <FaUserCircle className="text-xl text-gray-400 dark:text-gray-600" />}
+                    <span className="ml-2 text-sm text-gray-800 dark:text-gray-200" title={c.name}>{c.name}</span>
                 </li>
             ))}
         </ul>

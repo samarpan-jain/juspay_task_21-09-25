@@ -38,24 +38,29 @@ export default function DoughnutChart({ title, data }) {
             }
         }
     };
-    return (<div className="bg-gray-50 rounded-2xl p-6 w-full flex flex-col items-center">
-        <div className="font-semibold text-lg mb-4">{title}</div>
-        <div className="relative flex justify-center items-center mb-4 w-36 h-36">
-            <Doughnut data={chartData} options={chartOptions} />
-        </div>
-        <div className="w-full flex flex-col gap-2">
-            {data.map((d) => (
-                <div
-                    key={d.label}
-                    className={`flex items-center justify-between p-2 hover:bg-gray-200 rounded cursor-pointer`}
-                >
-                    <span className="flex items-center">
-                        <span className={`w-3 h-3 rounded-full ${d.dot} inline-block mr-2`} />
-                        <span className="text-gray-700">{d.label}</span>
-                    </span>
-                    <span className="font-semibold text-gray-700">${d.value.toFixed(2)}</span>
-                </div>
-            ))}
-        </div>
-    </div>);
+    return (<div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 w-full flex flex-col items-center">
+  <div className="font-semibold text-lg mb-4 text-gray-900 dark:text-gray-100">
+    {title}
+  </div>
+  <div className="relative flex justify-center items-center mb-4 w-36 h-36">
+    <Doughnut data={chartData} options={chartOptions} />
+  </div>
+  <div className="w-full flex flex-col gap-2">
+    {data.map((d) => (
+      <div
+        key={d.label}
+        className="flex items-center justify-between p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded cursor-pointer"
+      >
+        <span className="flex items-center">
+          <span className={`w-3 h-3 rounded-full inline-block mr-2`} style={{backgroundColor: `${d.color}`}} ></span>
+          <span className="text-gray-700 dark:text-gray-300">{d.label}</span>
+        </span>
+        <span className="font-semibold text-gray-700 dark:text-gray-200">
+          ${d.value.toFixed(2)}
+        </span>
+      </div>
+    ))}
+  </div>
+</div>
+);
 }           

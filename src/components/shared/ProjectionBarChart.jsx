@@ -51,8 +51,8 @@ export default function ProjectionBarChart({ title, chartData, stepSizeY, maxVal
         }
     };
     return (
-        <div className="flex flex-col h-full w-full">
-            <div className="font-semibold text-lg mb-4">{title}</div>
+        <div className="flex flex-col h-full w-full dark:text-gray-200">
+            <div className="font-semibold text-lg mb-4 text-gray-800 dark:text-gray-200">{title}</div>
             <div className="w-full h-full">
                 <Bar data={chartData} options={options} />
             </div>
