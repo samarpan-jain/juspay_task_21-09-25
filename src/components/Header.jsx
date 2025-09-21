@@ -19,8 +19,8 @@ const Header = ({ setPanelOpen }) => {
     return <header className="flex items-center justify-between px-5 pb-3 border-b bg-white dark:bg-gray-900 dark:border-gray-800">
         {/* Left Section */}
         <div className="flex items-center space-x-1">
-            <span className="p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700">
-                <LuPanelLeft className="text-xl cursor-pointer text-black dark:text-white" onClick={() => handlePanelOpen('left')} />
+            <span className="p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700" onClick={() => handlePanelOpen('left')}>
+                <LuPanelLeft className="text-xl cursor-pointer text-black dark:text-white"/>
             </span>
             <span className="p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700">
                 <FaRegStar className="text-xl cursor-pointer rounded hover:bg-gray-200 dark:hover:bg-gray-700 text-black dark:text-white" />
@@ -50,8 +50,8 @@ const Header = ({ setPanelOpen }) => {
             <span className="p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700">
                 <FaBell className="text-lg cursor-pointer rounded hover:bg-gray-200 dark:hover:bg-gray-700 text-black dark:text-white" />
             </span>
-            <span className="p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700">
-                <LuPanelRight className="text-xl cursor-pointer rounded hover:bg-gray-200 dark:hover:bg-gray-700 text-black dark:text-white" onClick={() => handlePanelOpen('right')} />
+            <span className="p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700" onClick={() => handlePanelOpen('right')}>
+                <LuPanelRight className="text-xl cursor-pointer rounded hover:bg-gray-200 dark:hover:bg-gray-700 text-black dark:text-white" />
             </span>
         </div>
     </header>
