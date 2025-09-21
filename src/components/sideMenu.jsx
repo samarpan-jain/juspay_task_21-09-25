@@ -63,7 +63,7 @@ const Sidebar = ({ menuItems, userName, profileImgPath }) => {
     };
 
     return (
-        <aside className="h-screen w-64 bg-white-800 text-gray p-4 overflow-y-auto">
+        <aside className="h-full w-64 bg-white-800 text-gray p-4 overflow-y-auto border-r">
             <div className="flex items-center mb-6">
                 <div className="pr-2 text-xl">{profileImgPath ? <img className="w-8 h-8 rounded-full object-cover" src={profileImgPath} alt="Profile Image"/> : <FaUserCircle />}</div>
                 <span className="font-semibold">{userName}</span>

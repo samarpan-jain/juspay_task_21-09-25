@@ -1,0 +1,6 @@
+[
+    { "label": "Direct", "value": 300.56, "color": "#111111", "dot": "bg-black" },
+    { "label": "Affiliate", "value": 135.18, "color": "#A7F3D0", "dot": "bg-green-200" },
+    { "label": "Sponsored", "value": 154.02, "color": "#A5B4FC", "dot": "bg-indigo-200" },
+    { "label": "E-mail", "value": 48.96, "color": "#93C5FD", "dot": "bg-blue-300" }
+]
