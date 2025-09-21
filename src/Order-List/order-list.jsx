@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Table from "../components/shared/table";
+import Table from "../components/shared/table.jsx";
 import { tableConfig, keyFn } from "./order-table.config.jsx";
 import OrderListHeader from "./order-list-header.jsx";
 
@@ -25,7 +25,7 @@ export default function OrderList() {
       const filteredData = orderListData.filter(item => item.status === filterStatus);
       setRenderList(filteredData);
     }
-    else{
+    else {
       setRenderList(orderListData);
     }
   }, [filterStatus])
@@ -39,16 +39,16 @@ export default function OrderList() {
       );
       setRenderList(results);
     }
-    else{
+    else {
       setRenderList(orderListData);
     }
   }, [searchText])
 
-  function handleFilterChange(filterVal){
+  function handleFilterChange(filterVal) {
     setFilterStatus(filterVal);
   }
 
-  function handleSearchChange(searchVal){
+  function handleSearchChange(searchVal) {
     setSearchText(searchVal);
   }
 
@@ -57,7 +57,7 @@ export default function OrderList() {
       Order List
     </h4>
     <div className="flex flex-col w-full mt-4">
-      <OrderListHeader handleFilterChange={handleFilterChange} filterStatus={filterStatus} handleSearchChange={handleSearchChange} searchText={searchText}/>
+      <OrderListHeader handleFilterChange={handleFilterChange} filterStatus={filterStatus} handleSearchChange={handleSearchChange} searchText={searchText} />
       <div className="overflow-x-auto mt-4 flex flex-col w-full">
         {orderListData && orderListData.length > 0 && <Table tableConfig={tableConfig} tableData={renderList} keyFn={keyFn} />}
       </div>

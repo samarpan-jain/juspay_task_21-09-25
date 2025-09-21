@@ -1,6 +1,6 @@
-import { projectionChartData} from "../assets/projectionChartData";
-import ProjectionBarChart from "../components/shared/ProjectionBarChart";
-import StatCard from "../components/shared/StatCard";
+import { projectionChartData } from "../assets/projectionChartData.js";
+import ProjectionBarChart from "../components/shared/ProjectionBarChart.jsx";
+import StatCard from "../components/shared/StatCard.jsx";
 
 export default function OrderSummary() {
     const stats = [
@@ -11,31 +11,31 @@ export default function OrderSummary() {
     ];
 
     return <div className="flex gap-6 mt-4">
-            {/* StatCards Section */}
-            <div className="w-full flex">
-                <div className="grid grid-cols-2 grid-rows-2 gap-4 w-full h-full">
-                    {stats.map((s, i) => (
-                        <StatCard
-                            key={i}
-                            title={s.title}
-                            value={s.value}
-                            change={s.change}
-                            positive={s.positive}
-                            bgClass={s.bgClass}
-                        />
-                    ))}
-                </div>
-            </div>
-            {/* Projection Chart Section */}
-            <div className="w-1/2 flex">
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl pt-6 px-5 pb-2 w-full h-full flex flex-col items-center">
-                    <ProjectionBarChart
-                        chartData={projectionChartData}
-                        title={"Projections vs Actuals"}
-                        stepSizeY={10}
-                        maxValY={30}
+        {/* StatCards Section */}
+        <div className="w-full flex">
+            <div className="grid grid-cols-2 grid-rows-2 gap-4 w-full h-full">
+                {stats.map((s, i) => (
+                    <StatCard
+                        key={i}
+                        title={s.title}
+                        value={s.value}
+                        change={s.change}
+                        positive={s.positive}
+                        bgClass={s.bgClass}
                     />
-                </div>
+                ))}
             </div>
-        </div>;
+        </div>
+        {/* Projection Chart Section */}
+        <div className="w-1/2 flex">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl pt-6 px-5 pb-2 w-full h-full flex flex-col items-center">
+                <ProjectionBarChart
+                    chartData={projectionChartData}
+                    title={"Projections vs Actuals"}
+                    stepSizeY={10}
+                    maxValY={30}
+                />
+            </div>
+        </div>
+    </div>;
 }

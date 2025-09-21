@@ -1,4 +1,4 @@
-import { locations, dots } from "../assets/revenueByLocationData";
+import { locations, dots } from "../assets/revenueByLocationData.js";
 
 export default function RevenueByLocation() {
     return (
