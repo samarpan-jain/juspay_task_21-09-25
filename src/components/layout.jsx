@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "./sidemenu.jsx";
 import { menuData } from "../assets/menu.jsx";
-import Header from "./Header.jsx";
+import Header from "./header.jsx";
 import RightSidebar from "./right_sidebar/right_sidebar.jsx";
 import { useState } from "react";
 import { useTheme } from "../contexts/theme.jsx";
