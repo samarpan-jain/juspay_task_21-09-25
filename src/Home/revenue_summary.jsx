@@ -1,6 +1,6 @@
-import LineChart from "../components/shared/LineChart.jsx";
-import RevenueByLocation from "../components/RevenueByLocation.jsx";
-import { revenueLineChartData } from "../assets/revenueLineChartData.js";
+import LineChart from "../components/shared/linechart.jsx";
+import RevenueByLocation from "../components/revenuebylocation.jsx";
+import { revenueLineChartData } from "../assets/revenue_line_chart_data.js";
 
 export default function RevenueSummary() {
     {/* Line Chart Section */ }

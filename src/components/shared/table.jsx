@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useCommonFunc } from "../../hooks/useCommonFunc.js";
-import { getSortIcons } from "../../assets/tableFuntions.jsx";
+import { getSortIcons } from "../../assets/table_funtions.jsx";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 

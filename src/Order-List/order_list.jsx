@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Table from "../components/shared/table.jsx";
-import { tableConfig, keyFn } from "./order-table.config.jsx";
-import OrderListHeader from "./order-list-header.jsx";
+import { tableConfig, keyFn } from "./order_table.config.jsx";
+import OrderListHeader from "./order_list_header.jsx";
 
 export default function OrderList() {
 

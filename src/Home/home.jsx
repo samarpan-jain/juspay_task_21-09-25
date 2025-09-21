@@ -1,6 +1,6 @@
-import OrderSummary from "./OrderSummary.jsx";
-import RevenueSummary from "./RevenueSummary.jsx";
-import SalesSummary from "./SalesSummary.jsx";
+import OrderSummary from "./order_summary.jsx";
+import RevenueSummary from "./revenue_summary.jsx";
+import SalesSummary from "./sales_summary.jsx";
 
 export default function Home() {
   return (<>

@@ -1,6 +1,6 @@
-import DashboardTable from "../components/shared/DashboardTable.jsx";
+import DashboardTable from "../components/shared/dashboardtable.jsx";
 import { useEffect, useState } from "react";
-import DoughnutChart from "../components/shared/DoughnutChart.jsx";
+import DoughnutChart from "../components/shared/doughnutchart.jsx";
 
 export default function SalesSummary() {
     const sellingProductsColumns = [

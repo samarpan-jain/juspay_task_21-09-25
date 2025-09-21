@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import Sidebar from "./sideMenu";
+import Sidebar from "./sidemenu.jsx";
 import { menuData } from "../assets/menu.jsx";
 import Header from "./Header.jsx";
-import RightSidebar from "./RightSidebar/RightSidebar.jsx";
+import RightSidebar from "./right_sidebar/right_sidebar.jsx";
 import { useState } from "react";
-import { useTheme } from "../contexts/theme";
+import { useTheme } from "../contexts/theme.jsx";
 
 export default function Layout() {
     const [panelOpen, setPanelOpen] = useState({ left: true, right: true });

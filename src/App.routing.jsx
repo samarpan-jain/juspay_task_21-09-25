@@ -1,7 +1,7 @@
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import LayoutPage from "./components/Layout";
 import Home from "./Home/home";
-import OrderList from "./Order-List/order-list";
+import OrderList from "./Order-List/order_list.jsx";
 
 function AllRoutes() {
   const router = createBrowserRouter(

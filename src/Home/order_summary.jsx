@@ -1,6 +1,6 @@
-import { projectionChartData } from "../assets/projectionChartData.js";
-import ProjectionBarChart from "../components/shared/ProjectionBarChart.jsx";
-import StatCard from "../components/shared/StatCard.jsx";
+import { projectionChartData } from "../assets/projection_chart_data.js";
+import ProjectionBarChart from "../components/shared/projectionbarchart.jsx";
+import StatCard from "../components/shared/statcard.jsx";
 
 export default function OrderSummary() {
     const stats = [

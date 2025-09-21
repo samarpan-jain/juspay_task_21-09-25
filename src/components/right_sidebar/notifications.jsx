@@ -1,4 +1,4 @@
-import { notifications } from "../../assets/notificationsData.js";
+import { notifications } from "../../assets/notifications_data.js";
 
 export default function Notifications() {
     return <>

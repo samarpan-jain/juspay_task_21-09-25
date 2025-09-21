@@ -1,6 +1,6 @@
-import Activities from "./Activities.jsx";
-import Contacts from "./Contacts.jsx";
-import Notifications from "./Notifications.jsx";
+import Activities from "./activities.jsx";
+import Contacts from "./contacts.jsx";
+import Notifications from "./notifications.jsx";
 
 const RightSidebar = () => (
     <div>
